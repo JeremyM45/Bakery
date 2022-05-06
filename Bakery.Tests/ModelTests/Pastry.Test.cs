@@ -25,7 +25,6 @@ namespace Bakery.Tests
     {
       Pastry bakedGoods = new Pastry(4);
       bakedGoods.PastryCost();
-      bakedGoods.PastryDiscountAdjust();
       Assert.AreEqual(7, bakedGoods.TotalCost);
     }
   }

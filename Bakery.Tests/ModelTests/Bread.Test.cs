@@ -25,7 +25,6 @@ namespace Bakery.Tests
     {
       Bread loaf = new Bread(8);
       loaf.BreadCost();
-      loaf.BreadDiscountAdjust();
       Assert.AreEqual(30, loaf.TotalCost);
     }
   }
