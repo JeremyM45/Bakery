@@ -20,13 +20,13 @@ namespace Bakery.Tests
       loaf.BreadCost();
       Assert.AreEqual(5, loaf.TotalCost);
     }
-    // [TestMethod]
-    // public void BreadDiscountAdjust_ShouldReturnACostOf10_int()
-    // {
-    //   Bread loaf = new Bread(3);
-    //   loaf.BreadCost();
-    //   loaf.BreadDiscountAdjust();
-    //   Assert.AreEqual(10, loaf.TotalCost);
-    // }
+    [TestMethod]
+    public void BreadDiscountAdjust_ShouldReturnACostOf10_int()
+    {
+      Bread loaf = new Bread(8);
+      loaf.BreadCost();
+      loaf.BreadDiscountAdjust();
+      Assert.AreEqual(30, loaf.TotalCost);
+    }
   }
 }

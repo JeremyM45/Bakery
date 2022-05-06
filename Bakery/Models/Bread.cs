@@ -16,5 +16,15 @@ namespace Bakery
     {
       TotalCost = Amount * PricePerLoaf;
     }
+    public void BreadDiscountAdjust()
+    {
+      for (int i = 1; i <= Amount; i++)
+      {
+        if(i % 3 == 0)
+        {
+          TotalCost -= PricePerLoaf;
+        }
+      }
+    }
   }
 }
