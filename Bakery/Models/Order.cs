@@ -17,15 +17,44 @@ namespace Bakery
       OrderTotal = BreadOrder.TotalCost + PastryOrder.TotalCost;
       if (BreadOrder.Amount > 0 && PastryOrder.Amount == 0)
       {
-        return "\nYour order is " + BreadOrder.Amount + " loaf(s) of bread\nTotal: $" + OrderTotal;
+        if (BreadOrder.Amount == 1)
+        {
+          return "\nYour order is " + BreadOrder.Amount + " loaf of bread\nTotal: $" + OrderTotal;
+        }
+        else
+        {
+          return "\nYour order is " + BreadOrder.Amount + " loafs of bread\nTotal: $" + OrderTotal;
+        }
       }
       else if (BreadOrder.Amount == 0 && PastryOrder.Amount > 0)
       {
-        return "\nYour order is " + PastryOrder.Amount + " pastry(ies)\nTotal: $" + OrderTotal;
+        if (PastryOrder.Amount == 1)
+        {
+          return "\nYour order is " + PastryOrder.Amount + " pastry\nTotal: $" + OrderTotal;
+        }
+        else
+        {
+          return "\nYour order is " + PastryOrder.Amount + " pastries\nTotal: $" + OrderTotal;
+        }
       }
       else if (BreadOrder.Amount > 0 && PastryOrder.Amount > 0)
       {
-        return "\nYour order is " + PastryOrder.Amount + " pastry(ies) and " + BreadOrder.Amount + " loaf(s) of bread\nTotal: $" + OrderTotal;
+        if (BreadOrder.Amount == 1)
+        {
+          return "\nYour order is " + PastryOrder.Amount + " pastries and " + BreadOrder.Amount + " loaf of bread\nTotal: $" + OrderTotal;
+        }
+        else if (PastryOrder.Amount == 1)
+        {
+          return "\nYour order is " + PastryOrder.Amount + " pastry and " + BreadOrder.Amount + " loafs of bread\nTotal: $" + OrderTotal;
+        }
+        else if (BreadOrder.Amount == 1 && PastryOrder.Amount == 1)
+        {
+          return "\nYour order is " + PastryOrder.Amount + " pastry and " + BreadOrder.Amount + " loaf of bread\nTotal: $" + OrderTotal;
+        }
+        else
+        {
+          return "\nYour order is " + PastryOrder.Amount + " pastries and " + BreadOrder.Amount + " loafs of bread\nTotal: $" + OrderTotal;
+        }
       }
       else
       {

@@ -5,10 +5,10 @@ class Program
 {
   static Pastry OrderPastries()
   {
-      Console.WriteLine("\nHow many pastries do you want? \n<$" + Pastry.PricePerPastry + " per pastry>");
-      int PastryAmount = int.Parse(Console.ReadLine());
-      Pastry pastryOrder = new Pastry(PastryAmount);
-      return pastryOrder;
+    Console.WriteLine("\nHow many pastries do you want? \n<$" + Pastry.PricePerPastry + " per pastry>");
+    int PastryAmount = int.Parse(Console.ReadLine());
+    Pastry pastryOrder = new Pastry(PastryAmount);
+    return pastryOrder;
   }
   static Bread OrderBread()
   {
