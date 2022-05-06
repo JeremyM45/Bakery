@@ -1,10 +1,11 @@
+using System;
 namespace Bakery
 {
   public class Order
   {
     public Bread BreadOrder {get; set;}
     public Pastry PastryOrder {get; set;}
-    public int OrderTotal {get; set;}
+    public double OrderTotal {get; set;}
 
     public Order()
     {
@@ -15,6 +16,7 @@ namespace Bakery
     public string TotalCostOfOrder()
     {
       OrderTotal = BreadOrder.TotalCost + PastryOrder.TotalCost;
+      TotalCostDiscountAdjust();
       if (BreadOrder.Amount > 0 && PastryOrder.Amount == 0)
       {
         if (BreadOrder.Amount == 1)
@@ -53,12 +55,19 @@ namespace Bakery
         }
         else
         {
-          return "\nYour order is " + PastryOrder.Amount + " pastries and " + BreadOrder.Amount + " loafs of bread\nTotal: $" + OrderTotal;
+          return "\nYour order is " + PastryOrder.Amount + " pastries and " + BreadOrder.Amount + " loafs of bread\nTotal: $" + OrderTotal.ToString("0.00");
         }
       }
       else
       {
         return "An Error Occured. " + BreadOrder.Amount + " or " + PastryOrder.Amount + " may be invalid numbers";
+      }
+    }
+    public void TotalCostDiscountAdjust()
+    {
+      if ((BreadOrder.Amount + PastryOrder.Amount) > 20)
+      {
+        OrderTotal *= .90;
       }
     }
   }

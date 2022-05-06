@@ -89,9 +89,11 @@ namespace Bakery.Tests
       Order newOrder = new Order();
       newOrder.BreadOrder = new Bread(7);
       newOrder.BreadOrder.BreadCost();
-      newOrder.PastryOrder = new Pastry(13);
+      newOrder.PastryOrder = new Pastry(14);
       newOrder.PastryOrder.PastryCost();
-      Assert.AreEqual(44.65, newOrder.TotalCostDiscountAdjust());
+      newOrder.TotalCostOfOrder();
+      newOrder.TotalCostDiscountAdjust();
+      Assert.AreEqual(44.10, newOrder.OrderTotal);
     }
   }
 }
