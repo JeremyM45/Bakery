@@ -12,5 +12,9 @@ namespace Bakery
       Amount = amount;
       PricePerPastry = 2;
     }
+    public void PastryCost()
+    {
+      TotalCost = Amount * PricePerPastry;
+    }
   }
 }
