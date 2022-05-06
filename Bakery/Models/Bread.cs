@@ -12,5 +12,9 @@ namespace Bakery
       Amount = amount;
       PricePerLoaf = 5;
     }
+    public void BreadCost()
+    {
+      TotalCost = Amount * PricePerLoaf;
+    }
   }
 }
