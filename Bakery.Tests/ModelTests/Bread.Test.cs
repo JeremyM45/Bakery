@@ -21,7 +21,7 @@ namespace Bakery.Tests
       Assert.AreEqual(5, loaf.TotalCost);
     }
     [TestMethod]
-    public void BreadDiscountAdjust_ShouldReturnACostOf10_int()
+    public void BreadDiscountAdjust_ShouldReturnACostOf30_int()
     {
       Bread loaf = new Bread(8);
       loaf.BreadCost();
