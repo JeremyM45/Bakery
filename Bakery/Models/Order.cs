@@ -21,37 +21,37 @@ namespace Bakery
       {
         if (BreadOrder.Amount == 1)
         {
-          return "\nYour order is " + BreadOrder.Amount + " loaf of bread\nTotal: $" + OrderTotal;
+          return "\nYour order is " + BreadOrder.Amount + " loaf of bread\nTotal: $" + OrderTotal.ToString("0.00");
         }
         else
         {
-          return "\nYour order is " + BreadOrder.Amount + " loafs of bread\nTotal: $" + OrderTotal;
+          return "\nYour order is " + BreadOrder.Amount + " loafs of bread\nTotal: $" + OrderTotal.ToString("0.00");
         }
       }
       else if (BreadOrder.Amount == 0 && PastryOrder.Amount > 0)
       {
         if (PastryOrder.Amount == 1)
         {
-          return "\nYour order is " + PastryOrder.Amount + " pastry\nTotal: $" + OrderTotal;
+          return "\nYour order is " + PastryOrder.Amount + " pastry\nTotal: $" + OrderTotal.ToString("0.00");
         }
         else
         {
-          return "\nYour order is " + PastryOrder.Amount + " pastries\nTotal: $" + OrderTotal;
+          return "\nYour order is " + PastryOrder.Amount + " pastries\nTotal: $" + OrderTotal.ToString("0.00");
         }
       }
       else if (BreadOrder.Amount > 0 && PastryOrder.Amount > 0)
       {
         if (BreadOrder.Amount == 1)
         {
-          return "\nYour order is " + PastryOrder.Amount + " pastries and " + BreadOrder.Amount + " loaf of bread\nTotal: $" + OrderTotal;
+          return "\nYour order is " + PastryOrder.Amount + " pastries and " + BreadOrder.Amount + " loaf of bread\nTotal: $" + OrderTotal.ToString("0.00");
         }
         else if (PastryOrder.Amount == 1)
         {
-          return "\nYour order is " + PastryOrder.Amount + " pastry and " + BreadOrder.Amount + " loafs of bread\nTotal: $" + OrderTotal;
+          return "\nYour order is " + PastryOrder.Amount + " pastry and " + BreadOrder.Amount + " loafs of bread\nTotal: $" + OrderTotal.ToString("0.00");
         }
         else if (BreadOrder.Amount == 1 && PastryOrder.Amount == 1)
         {
-          return "\nYour order is " + PastryOrder.Amount + " pastry and " + BreadOrder.Amount + " loaf of bread\nTotal: $" + OrderTotal;
+          return "\nYour order is " + PastryOrder.Amount + " pastry and " + BreadOrder.Amount + " loaf of bread\nTotal: $" + OrderTotal.ToString("0.00");
         }
         else
         {

@@ -34,6 +34,10 @@ class Program
       {
         userOrder.PastryOrder = OrderPastries();
         userOrder.PastryOrder.PastryCost();
+      } 
+      else if (orderMore.ToLower() != "y" && orderMore.ToLower() != "n")
+      {
+        Console.WriteLine("Error Invalid Input: " + orderMore + " is not Y or N\n");
       }
     }
     else if (bakedGoodsChoice.ToLower() == "pastry" || bakedGoodsChoice.ToLower() == "pastries")
@@ -46,6 +50,10 @@ class Program
       {
         userOrder.BreadOrder = OrderBread();
         userOrder.BreadOrder.BreadCost();
+      }
+      else (orderMore.ToLower() != "y" && orderMore.ToLower() != "n")
+      {
+        Console.WriteLine("Error Invalid Input: " + orderMore + " is not Y or N");
       }
     }
     else
