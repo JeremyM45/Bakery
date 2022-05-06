@@ -83,5 +83,15 @@ namespace Bakery.Tests
       newOrder.PastryOrder.PastryCost();
       Assert.AreEqual("\nYour order is 1 pastry and 5 loafs of bread\nTotal: $22", newOrder.TotalCostOfOrder());
     }
+    [TestMethod]
+    public void TotalCostDiscountAdjust_Returns5PercentDiscountOnOrderOver20_Int()
+    {
+      Order newOrder = new Order();
+      newOrder.BreadOrder = new Bread(7);
+      newOrder.BreadOrder.BreadCost();
+      newOrder.PastryOrder = new Pastry(13);
+      newOrder.PastryOrder.PastryCost();
+      Assert.AreEqual(44.65, newOrder.TotalCostDiscountAdjust());
+    }
   }
 }
