@@ -20,12 +20,7 @@ class Program
   static void Main()
   {
     Console.WriteLine("Welcome To Pierre's Bakery");
-    Console.WriteLine("----------------------------------------"
-    "\nToday's Specials:"
-    "\nBUY 2 OR MORE LOAFS OF BREAD AND GET EVERY THIRD FREE!"
-    "\nBUY 2 OR MORE PASTRIES AND GET EVERY THIRD HALF OFF!"
-    "\n ALL ORDERS OVER 20 ITEMS ARE 10% OFF!"
-    "\n----------------------------------------");
+    Console.WriteLine("----------------------------------------\nToday's Specials:\nBUY 2 OR MORE LOAFS OF BREAD AND GET EVERY THIRD FREE!\nBUY 2 OR MORE PASTRIES AND GET EVERY THIRD HALF OFF!\nALL ORDERS OVER 20 ITEMS ARE 10% OFF!\n----------------------------------------");
     Console.WriteLine("Would You like to order bread loafs or pastries?");
     string bakedGoodsChoice = Console.ReadLine();
     Order userOrder = new Order();
@@ -56,7 +51,7 @@ class Program
         userOrder.BreadOrder = OrderBread();
         userOrder.BreadOrder.BreadCost();
       }
-      else (orderMore.ToLower() != "y" && orderMore.ToLower() != "n")
+      else if (orderMore.ToLower() != "y" && orderMore.ToLower() != "n")
       {
         Console.WriteLine("Error Invalid Input: " + orderMore + " is not Y or N");
       }
